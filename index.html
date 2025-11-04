@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from html.kodesolution.com/2024/meato-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Nov 2025 12:11:41 GMT -->
+
+<head>
+  <meta charset="utf-8" />
+  <title>BRAITAL</title>
+  <!-- Stylesheets -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="plugins/revolution/css/settings.css" rel="stylesheet" type="text/css" />
+  <!-- REVOLUTION SETTINGS STYLES -->
+  <link href="plugins/revolution/css/layers.css" rel="stylesheet" type="text/css" />
+  <!-- REVOLUTION LAYERS STYLES -->
+  <link href="plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css" />
+  <!-- REVOLUTION NAVIGATION STYLES -->
+
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <link rel="shortcut icon" href="imgs/logob.png" type="image/x-icon" />
+  <link rel="icon" href="imgs/logob.png" type="image/x-icon" />
+
+  <!-- Responsive -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+  <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+
+
+<style>
+  /* 1) O cartão ocupa 100% da altura da coluna */
+.service-block .inner-box{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+
+/* 2) Área de imagem com proporção fixa (ajuste se quiser) */
+.service-block .image-box .image{
+  position:relative;
+  aspect-ratio: 4 / 3;     /* mude p/ 16/9, 1/1, etc, se preferir */
+  width:100%;
+  overflow:hidden;
+  border-radius: 12px;     /* opcional */
+  margin:0;
+}
+
+/* 3) Imagem preenche sem deformar */
+.service-block .image-box .image img{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover; object-position:center;
+  display:block;
+}
+
+/* 4) Conteúdo flex para ocupar o restante e alinhar direitinho */
+.service-block .content-box{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  padding-top:14px;        /* ajuste fino do respiro */
+  flex:1;                  /* ocupa o que sobrar da altura */
+}
+.service-block .content-box .text{ margin-top:auto; } /* empurra specs pro final */
+
+/* (opcional) se quiser alturas idênticas também no mobile */
+@media (max-width: 575px){
+  .service-block .image-box .image{ aspect-ratio: 16 / 9; }
+}
+
+
+/* O card mantém a altura; a imagem se ajusta */
+.project-block .inner-box{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* NÃO mexa na altura da caixa do card.
+   Só garanta que a imagem preencha e corte o excesso sem deformar. */
+.project-block .image-box .image{
+  position: relative;
+  overflow: hidden;   /* recorta o excedente da imagem */
+  /* não colocar aspect-ratio aqui */
+}
+
+.project-block .image-box .image img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;      /* preenche sem deformar (corta o excesso) */
+  object-position: center;
+  /* não usar height:auto */
+}
+
+/* Some com os textos (já escondi no HTML com d-none, isto é redundância defensiva) */
+.project-block .content-box{ display: none; }
+
+
+</style>
+
+<body>
+  <div class="page-wrapper">
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <!-- Main Header-->
+    <header class="main-header header-style-one">
+      <!-- Header Top -->
+      <div class="header-top">
+        <div class="top-left">
+          <!-- Info List -->
+          <ul class="list-style-one">
+            <li><i class="fa fa-map-marker-alt"></i> Mozambique, Maputo City
+
+Av. Mao Tse-Tung, crossing with Rua da Justiça
+
+№ 94.</li>
+            <li><i class="fa fa-clock"></i> Mon - Sat: 8am - 5pm</li>
+            <li><i class="fa fa-phone-volume"></i> <a href="tel:+92(8800)87890">0027768822152</a></li>
+          </ul>
+        </div>
+
+        <div class="top-right">
+          <ul class="social-icon-one">
+           
+            <li><a href="#"><span class="fa fa-x"></span></a></li>
+              <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
+            <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Header Top -->
+
+      <!-- Header Lower -->
+      <div class="header-lower">
+        <!-- Main box -->
+        <div class="main-box">
+          <div class="logo-box">
+            <div class="logo">
+              <a href="index.html"><img src="imgs/logob.png" style="max-width: 190px;" alt="" title="Meato" /></a>
+            </div>
+          </div>
+
+          <!--Nav Box-->
+          <div class="nav-outer">
+            <nav class="nav main-menu">
+              <ul class="navigation onepage-nav">
+                <li class="current"><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Service</a></li>
+               
+                <li><a href="page-contact.html">Contact</a></li>
+                <li><a href="#testimonial">Testimonial</a></li>
+                
+              </ul>
+            </nav>
+            <!-- Main Menu End-->
+
+            <div class="outer-box">
+              <button class="ui-btn ui-btn search-btn">
+                <span class="icon lnr lnr-icon-search"></span>
+              </button>
+
+            
+                 <a href=""><li><a href="https://wa.link/2khs72" target="_blank" rel="noopener noreferrer" class="btn">Reach our Whatsapp! <i class="fa fa-whatsapp"></i></a></li></a>
+              <a href="page-contact.html" class="theme-btn btn-style-one alternate"><span class="btn-title">Get A
+                  Quote</span></a>
+
+              <!-- Mobile Nav toggler -->
+              <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Header Lower -->
+
+      <!-- Mobile Menu  -->
+      <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+
+        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+        <nav class="menu-box">
+          <div class="upper-box">
+            <div class="nav-logo">
+              <a href="index.html"><img src="imgs/logob.png" style="max-width: 190px;" alt="" title="Meato" /></a>
+            </div>
+            <div class="close-btn"><i class="icon fa fa-times"></i></div>
+          </div>
+
+          <ul class="navigation onepage-nav clearfix">
+            <!--Keep This Empty / Menu will come through Javascript-->
+          </ul>
+          <ul class="contact-list-one">
+            <li>
+              <!-- Contact Info Box -->
+              <div class="contact-info-box">
+                <i class="icon lnr-icon-phone-handset"></i>
+                <span class="title">Call Now</span>
+                <a href="tel:+92880098670">+92 (8800) - 98670</a>
+              </div>
+            </li>
+            <li>
+              <!-- Contact Info Box -->
+              <div class="contact-info-box">
+                <span class="icon lnr-icon-envelope1"></span>
+                <span class="title">Send Email</span>
+                <a href="https://html.kodesolution.com/cdn-cgi/l/email-protection#93fbf6ffe3d3f0fcfee3f2fdeabdf0fcfe"><span
+                    class="__cf_email__"
+                    data-cfemail="3b535e574b7b5854564b5a554215585456">[email&#160;protected]</span></a>
+              </div>
+            </li>
+            <li>
+              <!-- Contact Info Box -->
+              <div class="contact-info-box">
+                <span class="icon lnr-icon-clock"></span>
+                <span class="title">Send Email</span>
+                Mon - Sat 8:00 - 6:30, Sunday - CLOSED
+              </div>
+            </li>
+          </ul>
+
+          <ul class="social-links">
+            <li><a href="#"><i class="fa fa-x"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- End Mobile Menu -->
+
+      <!-- Header Search -->
+      <div class="search-popup">
+        <span class="search-back-drop"></span>
+        <button class="close-search"><span class="fa fa-times"></span></button>
+
+        <div class="search-inner">
+          <form method="post" action="https://html.kodesolution.com/2024/meato-html/index.html">
+            <div class="form-group">
+              <input type="search" name="search-field" value="" placeholder="Search..." required="" />
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- End Header Search -->
+
+      <!-- Sticky Header  -->
+      <div class="sticky-header">
+        <div class="auto-container">
+          <div class="inner-container">
+            <!--Logo-->
+            <div class="logo">
+              <a href="index.html"><img src="imgs/logob.png" style="max-width: 190px;" alt="" title="Meato" /></a>
+            </div>
+
+            <!--Right Col-->
+            <div class="nav-outer">
+              <!-- Main Menu -->
+              <nav class="main-menu">
+                <div class="navbar-collapse show collapse clearfix">
+                  <ul class="navigation onepage-nav clearfix">
+                    <!--Keep This Empty / Menu will come through Javascript-->
+                  </ul>
+                </div>
+              </nav>
+              <!-- Main Menu End-->
+
+              <!--Mobile Navigation Toggler-->
+              <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Sticky Menu -->
+    </header>
+    <!--End Main Header -->
+
+    <!--Main Slider-->
+
+    <!--Main Slider-->
+    <section id="home" class="main-slider">
+      <div class="rev_slider_wrapper fullwidthbanner-container" id="rev_slider_one_wrapper" data-source="gallery">
+        <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
+          <ul>
+            <!-- Slide 1 -->
+            <li data-index="rs-1" data-transition="zoomout">
+              <!-- MAIN IMAGE -->
+              <img src="imgs/peixes_home.jpg" alt="" class="rev-slidebg" />
+
+              <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme ipad-hidden rs-parallaxlevel-1"
+                data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="shape" data-height="auto"
+                data-whitespace="nowrap" data-width="none" data-hoffset="['110','110','110','110']"
+                data-voffset="['110','90','90','90']" data-x="['right','right','right','right']"
+                data-y="['bottom','bottom','bottom','bottom']"
+                data-frames='[{"from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                <i class="float-icon flaticon-cow"></i>
+              </div>
+
+              <div class="tp-caption tp-resizeme rs-parallaxlevel-1 ipad-hidden" data-paddingbottom="[0,0,0,0]"
+                data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]"
+                data-responsive_offset="on" data-type="shape" data-height="none" data-whitespace="nowrap"
+                data-width="none" data-hoffset="['0','0','0','0']" data-voffset="['110','90','90','90']"
+                data-x="['right','right','right','right']" data-y="['bottom','bottom','bottom','bottom']"
+                data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                <i class="float-icon flaticon-goat"></i>
+              </div>
+
+              <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
+                data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text"
+                data-height="none" data-width="['750','750','750','650']" data-whitespace="normal"
+                data-hoffset="['0','0','0','0']" data-voffset="['-195','-160','-160','-140']"
+                data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']"
+                data-textalign="['top','top','top','top']"
+                data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                <span class="title">Fresh & Quality Meat</span>
+              </div>
+
+              <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
+                data-paddingright="[15,15,15,15]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
+                data-type="text" data-height="none" data-width="['750','750','750','650']" data-whitespace="normal"
+                data-hoffset="['0','0','0','0']" data-voffset="['-70','-40','-40','-30']"
+                data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']"
+                data-textalign="['top','top','top','top']"
+                data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                <h2>Online Order <br />Free Delivery</h2>
+              </div>
+
+              <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
+                data-paddingright="[15,15,15,15]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
+                data-type="text" data-height="none" data-width="['700','750','700','450']" data-whitespace="normal"
+                data-hoffset="['0','0','0','0']" data-voffset="['100','120','120','120']"
+                data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']"
+                data-textalign="['top','top','top','top']"
+                data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                <a href="page-about.html" class="theme-btn btn-style-one hvr-light"><span class="btn-title">Explore
+                    More</span></a>
+              </div>
+            </li>
+
+            <!-- Slide 1 -->
+            <li data-index="rs-2" data-transition="zoomout">
+              <!-- MAIN IMAGE -->
+              <img src="images/main-slider/2.jpg" alt="" class="rev-slidebg" />
+
+              <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme ipad-hidden rs-parallaxlevel-1"
+                data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="shape" data-height="auto"
+                data-whitespace="nowrap" data-width="none" data-hoffset="['110','110','110','110']"
+                data-voffset="['110','90','90','90']" data-x="['right','right','right','right']"
+                data-y="['bottom','bottom','bottom','bottom']"
+                data-frames='[{"from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                <i class="float-icon flaticon-cow"></i>
+                
+              </div>
+
+
+              
+
+               <i class="icon flaticon-fish" aria-label="Peixe"></i>
+
+              <div class="tp-caption tp-resizeme rs-parallaxlevel-1 ipad-hidden" data-paddingbottom="[0,0,0,0]"
+                data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]"
+                data-responsive_offset="on" data-type="shape" data-height="none" data-whitespace="nowrap"
+                data-width="none" data-hoffset="['0','0','0','0']" data-voffset="['110','90','90','90']"
+                data-x="['right','right','right','right']" data-y="['bottom','bottom','bottom','bottom']"
+                data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                <i class="float-icon flaticon-goat"></i>
+              </div>
+
+              <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
+                data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text"
+                data-height="none" data-width="['750','750','750','650']" data-whitespace="normal"
+                data-hoffset="['0','0','0','0']" data-voffset="['-195','-160','-160','-140']"
+                data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']"
+                data-textalign="['top','top','top','top']"
+                data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                <span class="title">Fresh & Quality Meat</span>
+              </div>
+
+              <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
+                data-paddingright="[15,15,15,15]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
+                data-type="text" data-height="none" data-width="['750','750','750','650']" data-whitespace="normal"
+                data-hoffset="['0','0','0','0']" data-voffset="['-70','-40','-40','-30']"
+                data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']"
+                data-textalign="['top','top','top','top']"
+                data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                <h2>
+                  Authentic Meat <br />
+                  by Leading Farm
+                </h2>
+              </div>
+
+              <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
+                data-paddingright="[15,15,15,15]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
+                data-type="text" data-height="none" data-width="['700','750','700','450']" data-whitespace="normal"
+                data-hoffset="['0','0','0','0']" data-voffset="['100','120','120','120']"
+                data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']"
+                data-textalign="['top','top','top','top']"
+                data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                <a href="page-about.html" class="theme-btn btn-style-one hvr-light"><span class="btn-title">Explore
+                    More</span></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- End Main Slider-->
+
+    <!-- Features Section -->
+    <!-- <section class="features-section">
+    <div class="auto-container">
+      <div class="row">
+
+        <div class="feature-block col-lg-4 col-md-6 col-sm-12">
+          <div class="inner-box">
+            <div class="icon-box">
+              <i class="icon flaticon-lab"></i>
+              <span class="count">01</span>
+            </div>
+            <div class="content-box">
+              <h4 class="title">
+                <a href="page-about.html">Laboratory Testing</a>
+              </h4>
+              <div class="text">Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod.</div>
+            </div>
+          </div>
+        </div>
+
+   
+        <div class="feature-block col-lg-4 col-md-6 col-sm-12">
+          <div class="inner-box">
+            <div class="icon-box">
+              <i class="icon flaticon-meat-1"></i>
+              <span class="count">02</span>
+            </div>
+            <div class="content-box">
+              <h4 class="title">
+                <a href="page-about.html">100% Fresh & Organic</a>
+              </h4>
+              <div class="text">Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-block col-lg-4 col-md-6 col-sm-12">
+          <div class="inner-box">
+            <div class="icon-box">
+              <i class="icon flaticon-temperature"></i>
+              <span class="count">03</span>
+            </div>
+            <div class="content-box">
+              <h4 class="title"><a href="page-about.html">Antibacterial Treatment</a></h4>
+              <div class="text">Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+
+    <!-- About Section Two -->
+    <section id="about" class="about-section-two">
+
+      <div class="auto-container">
+        <div class="row">
+          <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
+            <div class="inner-column">
+              <div class="sec-title">
+                <span class="sub-title">Get to know us</span>
+                <h2>About Us</h2>
+
+                <div class="text">Brainstorm Capital Lda., shortened as BRAITAL, created in 2021, is a prominent
+                  wholesale trading company, operating in Mozambique. We specialize in sourcing and delivering quality
+                  goods to deserving destinations, and are committed to establishing ourselves as a leading Pan African
+                  trading entity.
+
+                  Our team comprises highly skilled professionals with diverse backgrounds formation, including India,
+                  Brazil, South Africa, and Namibia. We strive to be recognized as a top-tier SADC corporation in our
+                  industry.
+
+                  At BRAITAL, we remain steadfast in our core mission to deliver top-notch trading services to our
+                  clients. Our unwavering commitment to excellence, integrity, and innovation is what sets us apart in
+                  the marketplace. We look forward to working with you, and are confident that our expertise and
+                  experience will provide you with the high-quality trading solutions you deserve.</div>
+              </div>
+
+              <div class="row">
+                <!-- Feature Block -->
+                <div class="feature-block-three col-lg-4 col-md-4 col-sm-12">
+                  <div class="inner">
+                    <i class="icon flaticon-chop"></i>
+                    <h4 class="title">Quality <br />meat</h4>
+                  </div>
+                </div>
+
+                <!-- Feature Block -->
+                <div class="feature-block-three col-lg-4 col-md-4 col-sm-12">
+                  <div class="inner">
+                    <i class="icon flaticon-chicken-leg"></i>
+                    <h4 class="title">Reduced <br />Pack Time</h4>
+                  </div>
+                </div>
+
+                <!-- Feature Block -->
+                <div class="feature-block-three col-lg-4 col-md-4 col-sm-12">
+                  <div class="inner">
+                    <i class="icon flaticon-butchering"></i>
+                    <h4 class="title">Delivery <br />on Time</h4>
+                  </div>
+                </div>
+
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Image Column -->
+          <div class="image-column col-lg-6 col-md-12 col-sm-12">
+            <div class="inner-column">
+              <figure class="image-1 wow fadeInUp"><img src="imgs/peixes_home.jpg" alt="" /></figure>
+              <figure class="image-2 wow fadeInRight">
+                <img src="imgs/maersk.jpeg" style="max-width: 500px;" alt="" />
+                <div class="icon-box" style="max-width: 200px;"><i class="icon flaticon-meat-1"></i> <i
+                    class="icon flaticon-chicken-leg"></i> <i class="icon flaticon-fish" aria-label="Peixe"></i></div>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!--Emd About Section -->
+    <!-- Services Section -->
+    <section id="service" class="services-section">
+      <div class="bg-image" style="background-image: url(images/background/1.jpg)"></div>
+      <div class="anim-icons">
+        <span class="icon icon-wave-line"></span>
+      </div>
+
+      <div class="auto-container">
+        <div class="sec-title text-center">
+          <span class="sub-title">Our offer</span>
+          <p>As a committed importer of nutritious and affordable chicken pieces such as wings, feet, tails, turkey drumsticks, and carapau, we are solidifying our position as a distinguished wholesale trader in Mozambique. Our unwavering commitment to excellence, sustainability, and community development has contributed significantly to the overall well-being of the local population. We are confident that our dedication to exceptional products and services will continue to drive our success and growth in the region.
+
+</p>
+        </div>
+
+        <div class="row">
+          <!-- Service Block -->
+          <div class="service-block col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp h-100">
+            <div class="inner-box">
+              <div class="image-box">
+                <figure class="image">
+                  <a href="page-service-details.html"><img src="imgs/carapau'.jpeg" class="h-100" alt="" /></a>
+                </figure>
+              </div>
+              <div class="content-box">
+                <i class="icon flaticon-fish" aria-label="Peixe"></i>
+                <span class="sub-title">Product</span>
+                <h4 class="title"><a href="page-service-details.html">Carapau</a></h4>
+
+                <div class="text">
+                  <ul class="specs">
+                    <li><strong>Package:</strong> 10KG × 3</li>
+                    <li><strong>Size:</strong> 14M to 25+</li>
+                    <li><strong>Source:</strong> Namibia / Capetown</li>
+                    <li><strong>Minimum order:</strong> 25 Tons</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Service Block -->
+          <div class="service-block col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp h-100" data-wow-delay="300ms">
+            <div class="inner-box">
+              <div class="image-box">
+                <figure class="image">
+                  <a href="page-service-details.html"><img src="imgs/chickenparts.jpeg" class="h-100" alt="" /></a>
+                </figure>
+              </div>
+              <div class="content-box">
+                <i class="icon flaticon-chicken-leg" aria-label="Frango"></i>
+                <span class="sub-title">Product</span>
+                <h4 class="title">
+                  <a href="page-service-details.html">Chicken Pieces</a>
+                </h4>
+
+                <div class="text">
+                  <ul class="specs">
+                    <li><strong>Pieces:</strong> Wings, Feet, Breast and Tails</li>
+                    <li><strong>Package:</strong> 10KG</li>
+                    <li><strong>Source:</strong> EU / Brazil</li>
+                    <li><strong>Minimum order:</strong> 25 Tons</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Service Block -->
+
+
+          <!-- Service Block -->
+          <div class="service-block col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp h-100" data-wow-delay="900ms">
+            <div class="inner-box">
+              <div class="image-box">
+                <figure class="image">
+                  <a href="page-service-details.html"><img src="imgs/peru.jpg" class="h-100" alt="" /></a>
+                </figure>
+              </div>
+              <div class="content-box">
+                <i class="icon flaticon-chicken-1" aria-label="Peru"></i>
+                <span class="sub-title">Product</span>
+                <h4 class="title">
+                  <a href="page-service-details.html">Turkey Drumsticks</a>
+                </h4>
+
+                <div class="text">
+                  <ul class="specs">
+                    <li><strong>Package:</strong> 10KG</li>
+                    <li><strong>Type:</strong> Male and Female</li>
+                    <li><strong>Source:</strong> EU / Brazil</li>
+                    <li><strong>Minimum Order:</strong> 25 Tons</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Services Section-->
+
+    <!-- Tracking Section -->
+    <section class="tracking-section pull-down">
+      <div class="auto-container">
+        <div class="outer-box">
+          <div class="arrow-box wow fadeInRight">
+            <img src="images/icons/arrow-2.png" alt="" class="icon" />
+            <span class="title">Results in <br />few seconds</span>
+          </div>
+          <div class="tracking-form">
+            <h4 class="title">Track your <br />Order</h4>
+            <!-- Tracking Form -->
+            <form method="post" action="#">
+              <div class="row">
+             
+                <!-- Form Group -->
+                <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                  <span class="icon lnr-icon-envelope1"></span>
+                  <input type="text" name="field_name" placeholder="Your Email Address" />
+                </div>
+                <!-- Form Group -->
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 text-end">
+                  <button type="submit" class="theme-btn btn-style-one"><span class="btn-title">Track
+                      Order</span></button>
+                </div>
+              </div>
+            </form>
+            <!-- End Tracking Form -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Tracking Section -->
+
+    <!-- Call To Action Two -->
+    <section class="call-to-action" style="background-image: url(imgs/maersk2.jpeg)">
+      <div class="auto-container">
+        <div class="outer-box">
+          <a href="https://www.youtube.com/watch?v=Fvae8nxzVz4" class="play-now lightbox-image"><i
+              class="icon fa fa-play"></i><span class="ripple"></span></a>
+          <div class="sec-title light mb-0">
+            <div class="sub-title">Get in touch with us anytime</div>
+            <h3 style="color: rgb(183, 181, 181); font-weight: 100;">We specialize in providing wholesale frozen goods in Mozambique. Our products are carefully selected for their quality and nutritional value, and we offer a wide range of options to suit any need or taste</h3>
+            <a href="page-contact.html" class="theme-btn btn-style-one hvr-light"><span class="btn-title">Call us now</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Call To Action Two -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <!--End Project Section -->
+
+    <!-- Why Choose Us -->
+    <section id="contact" class="why-choose-us pull-up pb-0">
+      <div class="bg-image" style="background-image: url(images/background/4.jpg)"></div>
+      <div class="anim-icons">
+        <div class="float-image"><img src="images/resource/delivery-boy.png" alt="" /></div>
+      </div>
+
+      <div class="auto-container">
+        <div class="row">
+          <!-- Content Column -->
+          <div class="content-column col-lg-6 col-md-12 col-sm-12">
+            <div class="inner-column">
+              <div class="sec-title light">
+                <span class="sub-title">Why Choose Us</span>
+                <h2>Best Meat From Our Organic Farm</h2>
+              </div>
+
+              <!-- Feature Block -->
+             <!-- Feature Block: 100% Organic Meat -->
+<div class="feature-block-two">
+  <div class="inner-box">
+    <i class="icon flaticon-meat-1" aria-hidden="true"></i>
+    <h4 class="title">100% Organic Meat</h4>
+    <p class="text">
+      We work with certified suppliers, ensuring quality, flavor, and traceability in every cut.
+    </p>
+  </div>
+</div>
+
+        <!-- Feature Block: Expert Butcher -->
+<div class="feature-block-two">
+  <div class="inner-box">
+    <i class="icon flaticon-butcher" aria-hidden="true"></i>
+    <h4 class="title">Expert Butcher</h4>
+    <p class="text">
+      A dedicated team of butchers—hard-working, fast, and efficient—who select and prepare cuts with precision and ensure on-time delivery for your business.
+    </p>
+  </div>
+</div>
+            </div>
+          </div>
+
+          <!-- form Column -->
+          <div class="form-column col-lg-6 col-md-12 col-sm-12">
+            <div class="inner-column">
+              <!-- Contact Form -->
+              <div class="contact-form wow fadeInLeft">
+                <!--Contact Form-->
+                <form id="contact_form" name="contact_form" class=""
+                  action="https://html.kodesolution.com/2024/meato-html/includes/sendmail.php" method="post">
+                  <div class="row">
+                    <div class="col-sm-12 form-group">
+                      <label>Your Name:</label>
+                      <input type="text" name="form_name" placeholder="" required />
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                      <label>Your Email:</label>
+                      <input type="text" name="form_email" placeholder="" required />
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                      <label>Phone No::</label>
+                      <input type="text" name="form_phone" placeholder="" required />
+                    </div>
+
+                    <div class="col-sm-12 form-group">
+                      <label>Weight (Kg):</label>
+                      <div class="range-slider-one">
+                        <input type="text" class="range-amount" name="field-name" readonly />
+                        <div class="distance-range-slider"></div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                      <label>Meat type:</label>
+                      <select class="custom-select">
+                        <option value="">Select</option>
+                        <option value="">Beef Meat</option>
+                        <option value="">Pork Meat</option>
+                        <option value="">Mutton Meat</option>
+                        <option value="">Lamb Meat</option>
+                        <option value="">Chicken Meat</option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                      <label>kg:</label>
+                      <select class="custom-select">
+                        <option value="">Select</option>
+                         <option value="">5/Kg</option>
+                        <option value="">10/Kg</option>
+                        <option value="">15/Kg</option>
+                        <option value="">20/Kg</option>
+                        <option value="">25/Kg</option>
+                        <option value="">30/Kg</option>
+                      </select>
+                    </div>
+
+                    <div class="col-sm-12 form-group">
+                      <button type="submit" class="theme-btn btn-style-two hvr-light"
+                        data-loading-text="Please wait..."><span class="btn-title">Submit Request</span></button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!--End Contact Form -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Why Choose Us -->
+
+
+
+    <!-- Testimonial Section -->
+    <section id="testimonial" class="testimonial-section pt-0">
+      <div class="anim-icons">
+        <span class="icon icon-bg-dots"></span>
+        <span class="icon icon-plane-2 bounce-y"></span>
+      </div>
+
+      <div class="auto-container">
+        <div class="sec-title text-center">
+          <span class="sub-title">Client’s Testimonials</span>
+          <h2>Here are some clients <br />feedbacks</h2>
+        </div>
+
+        <div class="outer-box">
+          <!-- Testimonial Carousel -->
+          <div class="testimonial-carousel owl-carousel owl-theme">
+            <!-- Testimonial Block -->
+            <div class="testimonial-block">
+              <div class="inner-box">
+                <div class="content-box">
+                  <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                      class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                  <div class="text">“All of our lorries are fitted with Satellite Tracking and Temperature Controlled
+                    monitoring systems so that the transportation of high value and temperature sensitive loads can be
+                    monitored at all times.</div>
+                </div>
+                <div class="thumb"><img src="images/resource/testi-thumb-1.jpg" alt="" /></div>
+                <span class="designation">Co Founder</span>
+                <h4 class="name">Jhon D. William</h4>
+              </div>
+            </div>
+
+            <!-- Testimonial Block -->
+            <div class="testimonial-block">
+              <div class="inner-box">
+                <div class="content-box">
+                  <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                      class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                  <div class="text">“All of our lorries are fitted with Satellite Tracking and Temperature Controlled
+                    monitoring systems so that the transportation of high value and temperature sensitive loads can be
+                    monitored at all times.</div>
+                </div>
+                <div class="thumb"><img src="images/resource/testi-thumb-2.jpg" alt="" /></div>
+                <span class="designation">Co Founder</span>
+                <h4 class="name">Aleesha Brown</h4>
+              </div>
+            </div>
+
+            <!-- Testimonial Block -->
+            <div class="testimonial-block">
+              <div class="inner-box">
+                <div class="content-box">
+                  <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                      class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                  <div class="text">“All of our lorries are fitted with Satellite Tracking and Temperature Controlled
+                    monitoring systems so that the transportation of high value and temperature sensitive loads can be
+                    monitored at all times.</div>
+                </div>
+                <div class="thumb"><img src="images/resource/testi-thumb-3.jpg" alt="" /></div>
+                <span class="designation">Co Founder</span>
+                <h4 class="name">Mike Hardon</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Testimonial Section -->
+
+    <!-- Offer Section -->
+
+    <!-- End Offer Section -->
+
+    <!-- News Section -->
+    <!-- <section id="news" class="news-section">
+      <div class="anim-icons">
+        <div class="float-image wow zoomInLeft"><img src="images/resource/float-img-2.png" alt="" /></div>
+      </div>
+
+      <div class="auto-container">
+        <div class="sec-title text-center">
+          <span class="sub-title">OUR NEWS FROM BLOG</span>
+          <h2>Latest news, advices<br /> & best posts from the blog</h2>
+        </div>
+
+        <div class="row">
+        
+          <div class="news-block col-lg-4 col-md-6 col-sm-12">
+            <div class="inner-box">
+              <div class="image-box">
+                <figure class="image">
+                  <a href="news-details.html"><img src="images/resource/news-1.jpg" alt="" /></a>
+                </figure>
+                <span class="date"><b>28</b> SEP</span>
+              </div>
+              <div class="lower-content">
+                <ul class="post-info">
+                  <li><i class="fa fa-user"></i> by Admin</li>
+                  <li><i class="fa fa-comments"></i> 2 Comments</li>
+                </ul>
+                <h4 class="title"><a href="news-details.html">Experience the difference of exceptional beef</a></h4>
+                <a href="news-details.html" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+    
+          <div class="news-block col-lg-4 col-md-6 col-sm-12">
+            <div class="inner-box">
+              <div class="image-box">
+                <figure class="image">
+                  <a href="news-details.html"><img src="images/resource/news-2.jpg" alt="" /></a>
+                </figure>
+                <span class="date"><b>28</b> SEP</span>
+              </div>
+              <div class="lower-content">
+                <ul class="post-info">
+                  <li><i class="fa fa-user"></i> by Admin</li>
+                  <li><i class="fa fa-comments"></i> 2 Comments</li>
+                </ul>
+                <h4 class="title"><a href="news-details.html">Our meat freshness you can taste and trust</a></h4>
+                <a href="news-details.html" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+    
+          <div class="news-block col-lg-4 col-md-6 col-sm-12">
+            <div class="inner-box">
+              <div class="image-box">
+                <figure class="image">
+                  <a href="news-details.html"><img src="images/resource/news-3.jpg" alt="" /></a>
+                </figure>
+                <span class="date"><b>28</b> SEP</span>
+              </div>
+              <div class="lower-content">
+                <ul class="post-info">
+                  <li><i class="fa fa-user"></i> by Admin</li>
+                  <li><i class="fa fa-comments"></i> 2 Comments</li>
+                </ul>
+                <h4 class="title"><a href="news-details.html">Our Company helped you for butcehr</a></h4>
+                <a href="news-details.html" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!--End News Section -->
+
+
+
+
+    <!-- Clients Section   -->
+    <!-- <section class="clients-section">
+      <div class="anim-icon">
+        <span class="icon dotted-line-1"></span>
+        <span class="icon dotted-line-2"></span>
+      </div>
+
+      <div class="auto-container">
+    
+        <div class="sponsors-outer">
+     
+          <ul class="clients-carousel owl-carousel owl-theme">
+            <li class="slide-item"><a href="#"><img src="images/clients/client.png" alt="" /></a></li>
+            <li class="slide-item"><a href="#"><img src="images/clients/client.png" alt="" /></a></li>
+            <li class="slide-item"><a href="#"><img src="images/clients/client.png" alt="" /></a></li>
+            <li class="slide-item"><a href="#"><img src="images/clients/client.png" alt="" /></a></li>
+            <li class="slide-item"><a href="#"><img src="images/clients/client.png" alt="" /></a></li>
+          </ul>
+        </div>
+      </div>
+    </section> -->
+    <!--End Clients Section -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      <div class="bg-image" style="background-image: url(images/background/5.jpg)"></div>
+      <div class="anim-icons">
+        <span class="icon shape-7 bounce-x"></span>
+      </div>
+
+      <!-- Contact info -->
+      <div class="contacts-outer">
+        <div class="auto-container">
+          <div class="row">
+            <!-- Contact Info Block -->
+            <div class="contact-info-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight">
+              <div class="inner-box">
+                <div class="icon-box"><i class="icon lnr lnr-icon-map-marker-check"></i></div>
+                <h4 class="title">Address</h4>
+                <div class="text">Mozambique, Maputo Province
+
+Marracuene, Mumemo Neighbourhood
+
+Block 1 - № 28  </div>
+              </div>
+            </div>
+
+            <!-- Contact Info Block -->
+            <div class="contact-info-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="300ms">
+              <div class="inner-box">
+                <div class="icon-box"><i class="icon lnr lnr-icon-phone-handset"></i></div>
+                <h4 class="title">Contact</h4>
+                <div class="text">
+                  <a
+                    href="https://html.kodesolution.com/cdn-cgi/l/email-protection#94faf1f1f0fcf1f8e4d4f7fbf9e4f5faedbaf7fbf9"><span
+                      class="__cf_email__"
+                      data-cfemail="26484343424e434a566645494b5647485f0845494b">[email&#160;protected]</span></a>
+                  <a href="tel:+92(8800)48720">0027768822152</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Info Block -->
+            <div class="contact-info-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="600ms">
+              <div class="inner-box">
+                <div class="icon-box"><i class="icon lnr lnr-icon-clock"></i></div>
+                <h4 class="title">Timing</h4>
+                <div class="text">Mon - Sat: 8 am - 5 pm, Sunday: CLOSED</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Contact info -->
+
+      <!--Widgets Section-->
+      <div class="widgets-section">
+        <div class="auto-container">
+         <div class="row g-4 align-items-start">
+  <!-- Coluna ESQUERDA -->
+  <div class="footer-column col-12 col-md-6 col-lg-4 order-lg-1">
+    <div class="footer-widget about-widget h-100">
+      <div class="logo">
+        <a href="index.html"><img src="imgs/logob.png" alt="" /></a>
+      </div>
+      <div class="text">
+        We work with a passion of taking challenges and creating new ones in advertising sector.
+      </div>
+      <a href="page-about.html" class="theme-btn btn-style-one hvr-light small">
+        <span class="btn-title">About</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Coluna CENTRO -->
+  <div class="footer-column col-12 col-md-6 col-lg-4 order-lg-2 align-items-center text-center justify-content-center">
+    <div class="footer-widget h-100">
+      <h3 class="widget-title">Links Rapidos</h3>
+      <ul class="user-links">
+        <li><a href="#home">Home </a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#service">Service</a></li> <!-- corrigido -->
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#testimonial">Testimonal</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Coluna DIREITA -->
+  <div class="footer-column col-12 col-md-8 col-lg-4 order-lg-3 ms-md-auto">
+    <div class="footer-widget h-100">
+      <h3 class="widget-title">Newsletter</h3>
+      <div class="widget-content">
+        <div class="subscribe-form">
+          <div class="text">Subscribe our newsletter to get our latest update &amp; news</div>
+          <form method="post" action="#">
+            <div class="form-group d-flex">
+              <input type="email" name="email" class="email form-control" placeholder="Email Address" required>
+              <button type="submit" class="theme-btn btn-style-one ms-2">
+                <span class="btn-title"><i class="fa fa-paper-plane"></i></span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+
+      <!--Footer Bottom-->
+      <div class="footer-bottom">
+        <div class="auto-container">
+          <div class="inner-container">
+            <div class="copyright-text">
+              <p>&copy; 2025 <a href="mechanical">Mechanical Tecnologia</a></p>
+            </div>
+
+            <ul class="social-icon-two">
+              <li>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-x"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--End Main Footer -->
+  </div>
+  <!-- End Page Wrapper -->
+
+  <!-- Scroll To Top -->
+  <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+  <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/popper.min.js"></script>
+  <!--Revolution Slider-->
+  <script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+  <script src="plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script src="plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script src="plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script src="plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script src="plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script src="plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script src="plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script src="plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script src="plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script src="plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script src="js/main-slider-script.js"></script>
+  <!--Revolution Slider-->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.fancybox.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/appear.js"></script>
+  <script src="js/select2.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/owl.js"></script>
+  <script src="js/script.js"></script>
+
+  <!-- form submit -->
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.form.min.js"></script>
+  <script>
+    (function ($) {
+      $("#contact_form").validate({
+        submitHandler: function (form) {
+          var form_btn = $(form).find('button[type="submit"]');
+          var form_result_div = "#form-result";
+          $(form_result_div).remove();
+          form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
+          var form_btn_old_msg = form_btn.html();
+          form_btn.html(form_btn.prop("disabled", true).data("loading-text"));
+          $(form).ajaxSubmit({
+            dataType: "json",
+            success: function (data) {
+              if (data.status == "true") {
+                $(form).find(".form-control").val("");
+              }
+              form_btn.prop("disabled", false).html(form_btn_old_msg);
+              $(form_result_div).html(data.message).fadeIn("slow");
+              setTimeout(function () {
+                $(form_result_div).fadeOut("slow");
+              }, 6000);
+            },
+          });
+        },
+      });
+    })(jQuery);
+  </script>
+</body>
+
+<!-- Mirrored from html.kodesolution.com/2024/meato-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Nov 2025 12:11:42 GMT -->
+
+</html>
