@@ -297,6 +297,14 @@ p, .text {
   margin: 0 auto;
 }
 
+
+.auto-containere {
+  position: static;
+  max-width: 1500px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+
 .small-container {
   position: static;
   max-width: 1000px;
@@ -1821,11 +1829,11 @@ Main Header
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          
   background: var(--bg-theme-color1);
-  margin-left: 240px;
-  padding-left: 30px;
-  padding-right: 55px;
+  margin-left: 50px;
+  padding-left: 190px;
+
 }
 .header-top .top-left {
   position: relative;
@@ -1847,7 +1855,7 @@ Main Header
 }
 .header-lower .logo-box {
   position: relative;
-  min-width: 265px;
+
   min-height: 110px;
   margin-right: 20px;
   background-color: var(--bg-theme-color4);

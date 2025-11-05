@@ -738,6 +738,18 @@
 	}
 
 	.main-footer .footer-widget{
-		padding-right: 0;
+		padding-right: 0px;
+		justify-content: center;
+		justify-items: center;
+		
+
+	}
+
+
+	.main-footer .footer-widget .widget-title{
+		text-align: center;
+		justify-items: center;
+	
+		
 	}
 }
