@@ -104,7 +104,16 @@
 <body>
   <div class="page-wrapper">
     <!-- Preloader -->
-    <div class="preloader"></div>
+   <!-- 🥩 PRELOADER -->
+  <div id="preloader">
+    <div class="pulse-ring"></div>
+    <div class="loader-icons">
+      <i class="icon flaticon-chop"></i>
+      <i class="icon flaticon-chicken-leg"></i>
+      <i class="icon flaticon-butchering"></i>
+    </div>
+    <div class="loader-text">Loading Fresh Frozen Products...</div>
+  </div>
 
     <!-- Main Header-->
     <header class="main-header header-style-one">
@@ -167,9 +176,14 @@
               </button>
 
             
-                 <a href=""><li><a href="https://wa.link/2khs72" target="_blank" rel="noopener noreferrer" class="btn">Reach our Whatsapp! <i class="fa fa-whatsapp"></i></a></li></a>
-              <a href="page-contact.html" class="theme-btn btn-style-one alternate"><span class="btn-title">Get A
-                  Quote</span></a>
+                 <a href="https://wa.me/27768822152" target="_blank" rel="noopener noreferrer" class="btn">
+  Reach our WhatsApp! <i class="fa fa-whatsapp"></i>
+</a>
+
+<a href="page-contact.html" class="theme-btn btn-style-one alternate">
+  <span class="btn-title">Get A Quote</span>
+</a>
+
 
               <!-- Mobile Nav toggler -->
               <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
@@ -904,74 +918,7 @@
 
 
 
-    <!-- Testimonial Section -->
-    <section id="testimonial" class="testimonial-section pt-0">
-      <div class="anim-icons">
-        <span class="icon icon-bg-dots"></span>
-        <span class="icon icon-plane-2 bounce-y"></span>
-      </div>
-
-      <div class="auto-container">
-        <div class="sec-title text-center">
-          <span class="sub-title">Client’s Testimonials</span>
-          <h2>Here are some clients <br />feedbacks</h2>
-        </div>
-
-        <div class="outer-box">
-          <!-- Testimonial Carousel -->
-          <div class="testimonial-carousel owl-carousel owl-theme">
-            <!-- Testimonial Block -->
-            <div class="testimonial-block">
-              <div class="inner-box">
-                <div class="content-box">
-                  <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                      class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
-                  <div class="text">“All of our lorries are fitted with Satellite Tracking and Temperature Controlled
-                    monitoring systems so that the transportation of high value and temperature sensitive loads can be
-                    monitored at all times.</div>
-                </div>
-                <div class="thumb"><img src="images/resource/testi-thumb-1.jpg" alt="" /></div>
-                <span class="designation">Co Founder</span>
-                <h4 class="name">Jhon D. William</h4>
-              </div>
-            </div>
-
-            <!-- Testimonial Block -->
-            <div class="testimonial-block">
-              <div class="inner-box">
-                <div class="content-box">
-                  <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                      class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
-                  <div class="text">“All of our lorries are fitted with Satellite Tracking and Temperature Controlled
-                    monitoring systems so that the transportation of high value and temperature sensitive loads can be
-                    monitored at all times.</div>
-                </div>
-                <div class="thumb"><img src="images/resource/testi-thumb-2.jpg" alt="" /></div>
-                <span class="designation">Co Founder</span>
-                <h4 class="name">Aleesha Brown</h4>
-              </div>
-            </div>
-
-            <!-- Testimonial Block -->
-            <div class="testimonial-block">
-              <div class="inner-box">
-                <div class="content-box">
-                  <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                      class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
-                  <div class="text">“All of our lorries are fitted with Satellite Tracking and Temperature Controlled
-                    monitoring systems so that the transportation of high value and temperature sensitive loads can be
-                    monitored at all times.</div>
-                </div>
-                <div class="thumb"><img src="images/resource/testi-thumb-3.jpg" alt="" /></div>
-                <span class="designation">Co Founder</span>
-                <h4 class="name">Mike Hardon</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+  
 
 
 
@@ -1200,12 +1147,13 @@
         <div class="inner-box">
           <div class="icon-box"><i class="icon lnr lnr-icon-phone-handset"></i></div>
           <h4 class="title">Contact</h4>
-          <div class="text">
-            <a href="tel:+258868822152">+258 86 882 2152</a>
+          <div class="text " >
+            <a href="https://wa.me/27768822152" target="_blank" > SA: +27 768 822 152</a> <br>
+            <a href="tel:+258868822152"> Mz: +258 86 882 2152</a>
           </div>
 
           <h4 class="title">Email</h4>
-          <div class="text">
+          <div class="text"  >
             <a href="mailto:info@braital.com">info@braital.com</a>
           </div>
           
@@ -1387,6 +1335,17 @@
     carousel.addEventListener('slide.bs.carousel', (e) => {
       thumbs.forEach(t => t.classList.remove('active'));
       thumbs[e.to].classList.add('active');
+    });
+  </script>
+
+
+  <script>
+    // Remove o preloader após o carregamento
+    window.addEventListener("load", function() {
+      const preloader = document.getElementById("preloader");
+      setTimeout(() => {
+        preloader.classList.add("hidden");
+      }, 2500); // 1.5s depois do load
     });
   </script>
 </body>

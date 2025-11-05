@@ -24,7 +24,17 @@
 <body>
 <div class="page-wrapper">
 	<!-- Preloader -->
-
+   <!-- Preloader -->
+   <!-- 🥩 PRELOADER -->
+  <div id="preloader">
+    <div class="pulse-ring"></div>
+    <div class="loader-icons">
+      <i class="icon flaticon-chop"></i>
+      <i class="icon flaticon-chicken-leg"></i>
+      <i class="icon flaticon-butchering"></i>
+    </div>
+    <div class="loader-text">Loading Fresh Frozen Products...</div>
+  </div>
 
    <!-- Main Header-->
     <header class="main-header header-style-one">
@@ -70,11 +80,11 @@
           <div class="nav-outer">
             <nav class="nav main-menu mx-auto">
               <ul class="navigation onepage-nav ">
-                <li class="current"><a href="#home">Home</a></li>
+                <li ><a href="index.html">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#service">Service</a></li>
                
-                <li><a href="page-contact.html">Contact</a></li>
+                <li class="current"><a href="page-contact.html">Contact</a></li>
                 <li><a href="#testimonial">Testimonial</a></li>
                 
               </ul>
@@ -87,8 +97,9 @@
               </button>
 
             
-                 <a href=""><li><a href="https://wa.link/2khs72" target="_blank" rel="noopener noreferrer" class="btn">Reach our Whatsapp! <i class="fa fa-whatsapp"></i></a></li></a>
-              <a href="page-contact.html" class="theme-btn btn-style-one alternate"><span class="btn-title">Get A
+               <a href="https://wa.me/27768822152" target="_blank" rel="noopener noreferrer" class="btn">
+  Reach our WhatsApp! <i class="fa fa-whatsapp"></i>
+</a>              <a href="page-contact.html" class="theme-btn btn-style-one alternate"><span class="btn-title">Get A
                   Quote</span></a>
 
               <!-- Mobile Nav toggler -->
@@ -234,7 +245,10 @@
 								</div>
 								<div class="text">
 									<h6>Have any question?</h6>
-									<a href="tel:980089850"><span>Free</span>  +27 76 882 2152</a>
+									<a href="https://wa.me/27768822152" target="_blank" > SA: +27 768 822 152</a> <br>
+                   <a href="tel:+258868822152"> Mz: +258 86 882 2152</a>
+                        
+           
 								</div>
 							</li>
 							<li>
@@ -343,7 +357,7 @@
 
 
 
-     <!-- Main Footer -->
+    <!-- Main Footer -->
     <footer class="main-footer">
       <div class="bg-image" style="background-image: url(images/background/5.jpg)"></div>
       <div class="anim-icons">
@@ -383,12 +397,13 @@
         <div class="inner-box">
           <div class="icon-box"><i class="icon lnr lnr-icon-phone-handset"></i></div>
           <h4 class="title">Contact</h4>
-          <div class="text">
-            <a href="tel:+258868822152">+258 86 882 2152</a>
+          <div class="text " >
+            <a href="https://wa.me/27768822152" target="_blank" > SA: +27 768 822 152</a> <br>
+            <a href="tel:+258868822152"> Mz: +258 86 882 2152</a>
           </div>
 
           <h4 class="title">Email</h4>
-          <div class="text">
+          <div class="text"  >
             <a href="mailto:info@braital.com">info@braital.com</a>
           </div>
           
@@ -536,6 +551,17 @@
 		});
 	})(jQuery);
 </script>
+
+
+  <script>
+    // Remove o preloader após o carregamento
+    window.addEventListener("load", function() {
+      const preloader = document.getElementById("preloader");
+      setTimeout(() => {
+        preloader.classList.add("hidden");
+      }, 500); // 1.5s depois do load
+    });
+  </script>
 </body>
 
 <!-- Mirrored from html.kodesolution.com/2024/meato-html/page-contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Nov 2025 12:12:12 GMT -->

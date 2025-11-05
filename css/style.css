@@ -9944,9 +9944,9 @@ Sidebar
 .contact-info-block .inner-box {
   position: relative;
   padding-left: 130px;
-  padding-right: 30px;
+
   padding-top: 25px;
-  min-height: 150px;
+  height: 190px;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 .contact-info-block .inner-box:hover .icon-box {
@@ -10334,4 +10334,91 @@ Sidebar
         width: 45%;
         height: 60px;
       }
+    }
+
+
+    /* preloader */
+
+
+
+      /* Fundo principal */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background-color: #900000; /* Vermelho da marca */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #fff;
+      overflow: hidden;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+
+    /* Círculo pulsante ao fundo */
+    .pulse-ring {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      animation: pulse 1.8s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.9); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 0.3; }
+      100% { transform: scale(0.9); opacity: 0.8; }
+    }
+
+    /* Ícones centrais */
+    .loader-icons {
+      position: relative;
+      display: flex;
+      gap: 25px;
+      z-index: 2;
+    }
+
+    .loader-icons i {
+      font-size: 42px;
+      color: #fff;
+      opacity: 0.9;
+      animation: bounce 1.4s infinite ease-in-out;
+    }
+
+    /* Cada ícone com delay diferente */
+    .loader-icons i:nth-child(1) { animation-delay: 0s; }
+    .loader-icons i:nth-child(2) { animation-delay: 0.2s; }
+    .loader-icons i:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes bounce {
+      0%, 80%, 100% { transform: translateY(0); opacity: 0.8; }
+      40% { transform: translateY(-18px); opacity: 1; }
+    }
+
+    /* Texto */
+    .loader-text {
+      margin-top: 25px;
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      z-index: 2;
+      color: #fff;
+      animation: fadeIn 1.8s infinite;
+    }
+
+    @keyframes fadeIn {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+
+    /* Efeito desaparecer */
+    #preloader.hidden {
+      opacity: 0;
+      visibility: hidden;
     }
