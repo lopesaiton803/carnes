@@ -828,7 +828,7 @@ body, p, .text {
 
 /* -------- Headings ---------- */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--headings-color);
+ 
   font-family: var(--title-font);
   position: relative;
   line-height: 1.2em;
@@ -1831,7 +1831,7 @@ Main Header
       -ms-flex-pack: justify;
           
   background: var(--bg-theme-color1);
-  margin-left: 50px;
+  margin-left: 231px;
   padding-left: 190px;
 
 }
@@ -10422,3 +10422,219 @@ Sidebar
       opacity: 0;
       visibility: hidden;
     }
+
+
+
+    /* transalte
+     */
+
+
+   /* Mantém o wrapper exatamente onde estava */
+/* .gtranslate_wrapper {
+  position: relative !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  margin-left: 12px;
+  margin-right: 8px;
+  z-index: 1000 !important;
+  max-width: 220px;
+  box-shadow: none;
+  border: none;
+} */
+
+/* Remove o position relativo que deformava a navbar */
+/* .gtranslate_wrapper * {
+  position: static !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+} */
+
+/* Estilo do seletor */
+/* .gtranslate_wrapper select,
+.gtranslate_wrapper .gtranslate_combo {
+  display: inline-block;
+  margin: 0;
+  padding: 6px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+} */
+
+/* Permite o dropdown abrir sem empurrar o navbar */
+/* .gtranslate_wrapper {
+  overflow: visible !important;
+} */
+
+/* Responsivo */
+/* @media (max-width: 576px) {
+  .gtranslate_wrapper { display: none !important; }
+  } */
+
+/* About company feature layout */
+.about-section-two .about-feature {
+  display: flex;
+  align-items: stretch;
+  gap: 26px;
+  margin-bottom: 28px;
+  background: transparent;
+}
+
+.about-section-two .about-feature.about-plain {
+  background: #ffffff;
+  box-shadow: none;
+}
+
+.about-section-two .about-feature.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-section-two .feature-media {
+  position: relative;
+  flex: 1 1 45%;
+  min-width: 280px;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.about-section-two .about-dark .feature-media {
+  background: #1d1209;
+}
+
+.about-section-two .about-light .feature-media {
+  background: #ffffff;
+}
+
+.about-section-two .feature-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  display: block;
+  mix-blend-mode: normal;
+  border-radius: none;
+}
+
+.about-section-two .feature-body {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 26px;
+  
+
+ 
+}
+
+.about-section-two .feature-body.body-light {
+  background: #ffffff;
+  color: var(--headings-color);
+}
+
+.about-section-two .feature-body.body-dark {
+  background: #1d1209;
+  color: #f8f5f1;
+}
+
+.about-section-two .feature-body.body-plain {
+  background: #ffffff;
+  color: var(--headings-color);
+  box-shadow: none;
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+  gap: 14px;
+}
+
+.about-section-two .feature-body.body-dark .sub-title,
+.about-section-two .feature-body.body-dark h2,
+.about-section-two .feature-body.body-dark h3,
+.about-section-two .feature-body.body-dark .text {
+  color: #f8f5f1;
+}
+
+.about-section-two .feature-body .sub-title,
+.about-section-two .sec-title .sub-title {
+  color: var(--theme-color2);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.about-section-two .feature-body.body-dark .sub-title {
+  color: #f8f5f1;
+}
+
+.about-section-two .feature-body .feature-title {
+  font-size: 26px;
+  margin: 0;
+  color: var(--headings-color);
+}
+
+.about-section-two .feature-body.body-dark .feature-title {
+  color: #fff;
+}
+
+.about-section-two .about-list {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 8px 0 0;
+  display: grid;
+  gap: 8px;
+}
+
+.about-section-two .about-list li {
+  color: inherit;
+  font-weight: 600;
+}
+
+.about-section-two .feature-body.body-dark .about-list li {
+  color: #f8f5f1;
+}
+
+@media (max-width: 991px) {
+  .about-section-two .about-feature,
+  .about-section-two .about-feature.reverse {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .about-section-two .feature-media {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .about-section-two .feature-body {
+    padding: 20px;
+  }
+
+  .about-section-two .feature-media img {
+    min-height: 280px;
+  }
+}
+
+/* Header top resilience when translations grow */
+.header-top {
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  padding: 10px 20px;
+}
+
+.header-top .list-style-one {
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  padding: 0;
+}
+
+.header-top .list-style-one li {
+  display: flex;
+  align-items: center;
+  line-height: 1.4;
+}
+
+.header-top .list-style-one li i {
+  margin-right: 8px;
+}
