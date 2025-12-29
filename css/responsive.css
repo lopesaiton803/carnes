@@ -118,12 +118,12 @@
 	}
 
 	.contact-info-block .inner-box{
-		padding-left: 100px;
+		padding-left: 80px;
 	}
 
 	.contact-info-block .icon-box{
-		width: 80px;
-		font-size: 48px
+		width: 52px;
+		font-size: 28px
 	}
 
 	.about-section-two .image-column .inner-column{
@@ -841,4 +841,3 @@
   
   }
 }
-

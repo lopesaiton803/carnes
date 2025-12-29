@@ -47,11 +47,11 @@ License: copyright commercial
 @import url("tm-utility-classes.css");
 :root {
   --theme-color1: #000000;
-  --theme-color2: #900000;
+  --theme-color2: #190b00;
   --theme-color3: #0d354f;
   --theme-color4: #f8f5f1;
   --theme-color1-rgb: 0, 0, 0;
-  --theme-color2-rgb: 144, 0, 0;
+  --theme-color2-rgb: 25, 11, 0;
   --theme-color3-rgb: 13, 53, 79;
   --theme-color4-rgb: 248, 245, 241;
   --bg-theme-color1: var(--theme-color1);
@@ -4843,7 +4843,7 @@ Section Title
   font-size: 13px;
   text-transform: capitalize;
   line-height: 24px;
-  color: #ff0000;
+  color: #190b00;
   margin-bottom: 0;
 }
 .contact-form .form-group .select2-container--default .select2-selection--single,
@@ -7176,7 +7176,7 @@ Section Title
   display: inline-block;
   margin-right: 15px;
   font-size: 16px;
-  color: #ff0000;
+  color: #190b00;
   line-height: 27px;
   opacity: 0.3;
 }
@@ -7412,7 +7412,7 @@ Section Title
   display: inline-block;
   margin-right: 15px;
   font-size: 16px;
-  color: #ff0000;
+  color: #190b00;
   line-height: 27px;
   opacity: 0.3;
 }
@@ -9914,7 +9914,7 @@ Sidebar
 }
 .contact-info-block .inner-box {
   position: relative;
-  padding-right: 130px;
+  padding-right: 105px;
   padding-left: 30px;
   padding-top: 25px;
   min-height: 150px;
@@ -9928,8 +9928,8 @@ Sidebar
   position: absolute;
   right: 0px;
   top: 25px;
-  height: 100px;
-  width: 100px;
+  height: 60px;
+  width: 60px;
   color: var(--theme-color2-light);
   background-color: #1d1d29;
   display: -webkit-box;
@@ -9941,7 +9941,7 @@ Sidebar
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 64px;
+  font-size: 32px;
   border-radius: 5px;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
