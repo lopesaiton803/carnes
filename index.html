@@ -12,11 +12,12 @@
   <!-- REVOLUTION SETTINGS STYLES -->
   <link href="plugins/revolution/css/layers.css" rel="stylesheet" type="text/css" />
   <!-- REVOLUTION LAYERS STYLES -->
-  <link href="plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css" />
-  <!-- REVOLUTION NAVIGATION STYLES -->
-
-  <link href="css/style.css" rel="stylesheet" />
-  <link href="css/responsive.css" rel="stylesheet" />
+    <link href="plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css" />
+    <!-- REVOLUTION NAVIGATION STYLES -->
+  
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <link href="css/custom-responsive.css" rel="stylesheet" />
 
   <link rel="shortcut icon" href="imgs/logob.png" type="image/x-icon" />
   <link rel="icon" href="imgs/logob.png" type="image/x-icon" />
@@ -161,17 +162,38 @@
   }
 
   /* Ajuste do topo para alinhar conteudo a direita e evitar corte */
+  .header-top {
+    background: #0f0905;
+    color: #fff;
+    padding: 10px 24px;
+    position: relative;
+    z-index: 12;
+  }
+
   .header-top .top-left {
     width: 100%;
   }
 
   .header-top .top-left .list-style-one {
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 8px 18px;
-    text-align: right;
-    padding-right: 60px;
+    text-align: left;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1280px;
+  }
+
+  .header-top .top-left .list-style-one li {
+    color: #fff;
+    font-size: 13.5px;
+    letter-spacing: 0.01em;
+  }
+
+  .header-top .top-left .list-style-one li a {
+    color: #fff;
   }
 
   /* Supply Terms timeline (vertical alternado) */
@@ -433,12 +455,6 @@
             </li>
           </ul>
 
-          <ul class="social-links">
-            <li><a href="#"><i class="fa fa-x"></i></a></li>
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-          </ul>
         </nav>
       </div>
       <!-- End Mobile Menu -->
@@ -498,7 +514,7 @@
         <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
           <ul>
             <!-- Slide 1 -->
-            <li data-index="rs-1" data-transition="zoomout">
+            <li data-index="rs-1" data-transition="fade">
               <!-- MAIN IMAGE -->
               <img src="imgs/peixes_home.jpg" alt="" class="rev-slidebg" />
 
@@ -524,7 +540,7 @@
 <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
      data-paddingright="[15,15,15,15]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
      data-type="text" data-height="none" data-width="['750','750','750','650']" data-whitespace="normal"
-     data-hoffset="['0','0','0','0']" data-voffset="['-175','-140','-140','-120']" 
+     data-hoffset="['0','0','0','0']" data-voffset="['-175','-140','-140','-90']" 
      data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']"
      data-textalign="['top','top','top','top']"
      data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
@@ -534,19 +550,20 @@
 <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
      data-paddingright="[15,15,15,15]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
      data-type="text" data-height="none" data-width="['750','750','750','650']" data-whitespace="normal"
-     data-hoffset="['0','0','0','0']" data-voffset="['-70','-40','-40','-30']"
+     data-hoffset="['0','0','0','0']" data-voffset="['-70','-40','-40','-5']"
      data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']"
      data-textalign="['top','top','top','top']"
      data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
-    <h2 style="padding-top: 30px; padding-bottom: 30px; max-width: 800px; margin: 0 auto; word-wrap: break-word; line-height: 1.2;">
-        Online Order  Delivery
+    <h2 class="hero-title" style="padding-top: 30px; padding-bottom: 30px; max-width: 800px; margin: 0 auto; word-wrap: break-word; line-height: 1.2;">
+        <span class="hero-line">Online Order</span>
+        <span class="hero-line">Delivery</span>
     </h2>
 </div>
 
 <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
      data-paddingright="[15,15,15,15]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
      data-type="text" data-height="none" data-width="['700','750','700','450']" data-whitespace="normal"
-     data-hoffset="['0','0','0','0']" data-voffset="['120','140','140','140']" 
+     data-hoffset="['0','0','0','0']" data-voffset="['120','140','140','70']" 
      data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']"
      data-textalign="['top','top','top','top']"
      data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
@@ -556,9 +573,9 @@
             </li>
 
             <!-- Slide 1 -->
-            <li data-index="rs-2" data-transition="zoomout">
+            <li data-index="rs-2" data-transition="fade">
               <!-- MAIN IMAGE -->
-              <img src="images/CARNES (1).png" alt="" class="rev-slidebg" />
+              <img src="images/importacaocarnes.png" alt="" class="rev-slidebg" />
 
               <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme ipad-hidden rs-parallaxlevel-1"
                 data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]"
@@ -588,7 +605,7 @@
               <div class="tp-caption" style="margin-top: 20px;" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
                 data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text"
                 data-height="none" data-width="['750','750','750','650']" data-whitespace="normal"
-                data-hoffset="['0','0','0','0']" data-voffset="['-195','-160','-160','-140']"
+                data-hoffset="['0','0','0','0']" data-voffset="['-195','-160','-160','-90']"
                 data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']"
                 data-textalign="['top','top','top','top']"
                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
@@ -598,20 +615,20 @@
               <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
                 data-paddingright="[15,15,15,15]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
                 data-type="text" data-height="none" data-width="['750','750','750','650']" data-whitespace="normal"
-                data-hoffset="['0','0','0','0']" data-voffset="['-70','-40','-40','-30']"
+                data-hoffset="['0','0','0','0']" data-voffset="['-70','-40','-40','-5']"
                 data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']"
                 data-textalign="['top','top','top','top']"
                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
-                <h2>
-                  Authentic Meat 
-                  by Leading Farm
+                <h2 class="hero-title">
+                  <span class="hero-line">Authentic Meat</span>
+                  <span class="hero-line">by Leading Farm</span>
                 </h2>
               </div>
 
               <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
                 data-paddingright="[15,15,15,15]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
                 data-type="text" data-height="none" data-width="['700','750','700','450']" data-whitespace="normal"
-                data-hoffset="['0','0','0','0']" data-voffset="['100','120','120','120']"
+                data-hoffset="['0','0','0','0']" data-voffset="['100','120','120','70']"
                 data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']"
                 data-textalign="['top','top','top','top']"
                 data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
@@ -1017,55 +1034,9 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="container mb-5 sec-title ">
-      <h2 class="mb-3 sub-title">GALLERY </h2>
-      <p>From the cold storage to the customer — excellence in preservation and transport. elit, sed do</p>
+    <div class="container mt-5 mb-5 pt-4 sec-title text-center" style="text-align: center;">
+      <h2 class="mb-3 sub-title text-center" style="text-align: center !important;">GALLERY</h2>
+      <p class="text-center">From the cold storage to the customer — excellence in preservation and transport. elit, sed do</p>
 
       <div class="carousel-container">
         <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
